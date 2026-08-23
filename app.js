@@ -29,9 +29,16 @@ signupForm.addEventListener("submit", function (event) {
 
   localStorage.setItem("nettagProfiles", JSON.stringify(profiles));
 
-  message.textContent = "Your NetTag profile was created successfully!";
+message.textContent = "Your NetTag profile was created successfully!";
 
-  signupForm.reset();
+document.getElementById("profileName").textContent = name;
+document.getElementById("profileTag").textContent = tag;
+document.getElementById("profileEmail").textContent = email;
+document.getElementById("profileDisplay").style.display = "block";
+
+signupForm.reset();
+
+  
 });
 
 signinForm.addEventListener("submit", function (event) {
