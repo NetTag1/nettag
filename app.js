@@ -66,8 +66,12 @@ if (signinForm) {
       message.textContent = "NetTag profile not found.";
       return;
     }
+message.textContent =
+  `Welcome back, ${profiles[tag].name}!`;
 
-    message.textContent =
-      `Welcome back, ${profiles[tag].name}!`;
+document.getElementById("profileName").textContent = profiles[tag].name;
+document.getElementById("profileTag").textContent = profiles[tag].tag;
+document.getElementById("profileEmail").textContent = profiles[tag].email;
+document.getElementById("profileDisplay").style.display = "block";
   });
 }
